@@ -1,0 +1,45 @@
+
+@mixin linear-gradient($color1: #1e5799, $color2: #2989d8, $color-stop: 50%, $color3: #7db9e8) {
+  background-image: -webkit-linear-gradient($color1, $color2 $color-stop, $color3);
+  background-image: -o-linear-gradient($color1, $color2 $color-stop, $color3);
+  background-image: linear-gradient($color1, $color2 $color-stop, $color3);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=$color1, endColorstr=$color3, GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+.wrapper {
+    .hero {
+      width: 80%;
+      height: 100px;
+      margin: 0 auto;
+      margin-top: 10px;
+      background: #1e5799; /* Old browsers */
+      @include linear-gradient;
+        h1 {
+          color: #fff;
+          text-align: center;
+          padding-top: 30px;
+        }
+    }
+    .box {
+      width: 32%;
+      height: 200px;
+      background: #444;
+      float: left;
+      margin: 10px 10px;
+      background: #1e5799; /* Old browsers */
+      @include linear-gradient;
+      @include transition(width, 1s, linear, .5s);
+        &:hover {
+            width: 50%;
+        }
+    }
+}
