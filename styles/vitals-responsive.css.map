@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAS;EACP,MAAM,EAAE,MAAM;EACd,KAAK,EAAE,GAAG;;AAGZ,OAAQ;EACN,aAAa,EAAE,IAAI;;AAGrB,MAAO;EACL,gBAAgB,EAAE,OAAO;EACzB,UAAU,EAAE,iBAAiB;EAC7B,MAAM,EAAE,KAAK;EACb,OAAO,EAAE,MAAM",
+"sources": ["vitals-responsive.scss"],
+"names": [],
+"file": "vitals-responsive.css"
+}
